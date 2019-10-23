@@ -1,0 +1,27 @@
+﻿@Model List<MintaZH.Models.MerkozesekModell>;
+@{
+    ViewBag.Title = "Feladat3";
+    MintaZH.Models.MerkozesekModell merkozes = (MintaZH.Models.MerkozesekModell)ViewData["merkozes"];
+}
+
+    <h2>Feladat3</h2>
+    <b>
+        @merkozes.Cs1Nev-@merkozes.Cs2Nev @merkozes.Cs1Gol:@merkozes.Cs2Gol
+    </b>
+
+    <ul>
+        @foreach (var item in ViewBag.osszpontok)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <ul>
+        @foreach (var item in Model)
+        {
+        <li>
+            <b>
+                @item.Cs1Nev-@item.Cs2Nev @item.Cs1Gol:@item.Cs2Gol
+            </b>
+        </li>
+        }
+    </ul>
